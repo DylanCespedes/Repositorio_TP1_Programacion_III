@@ -75,6 +75,15 @@ nav{
     height: 4rem;
 }
 
+.iconos{
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.icono{
+    margin-right: 1rem;
+}
+
 /******************************************* HEADER *******************************************/
 main{
     padding-top: 15vh;
