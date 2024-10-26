@@ -87,6 +87,18 @@ nav{
     border: none;
 }
 
+.contador-carro{
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
 /*********************************** MAIN ***********************************/
 
 #main{

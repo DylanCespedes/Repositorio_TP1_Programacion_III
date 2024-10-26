@@ -81,6 +81,26 @@ nav{
     margin-right: 1rem;
 }
 
+.contador-carro{
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.position-relative .badge{
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    font-size: 0.7rem;
+    padding: 0.2em 0.4em;
+}
+
 /*********************************** MAIN ***********************************/
 
 #main{

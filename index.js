@@ -1,3 +1,9 @@
-function mostrarAlerta(){
-    alert("Agregado con exito al carro!!!");
+let contadorCarrito = 0;
+
+function agregarCarrito(){
+    contadorCarrito++;
+
+    document.getElementById("contadorCarrito").textContent = contadorCarrito;
+
+    alert("Se agrego al carro con exito!!!");
 }

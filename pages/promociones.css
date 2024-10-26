@@ -30,15 +30,19 @@ a{
 /* selector { propiedades: valor; } */
 
 body {
+    
     margin: 0;
     padding: 0;
     font-family: var(--letraFamily);
+    background-color: var(--background);
+    
 }
 
 *{
     font-family: "Kanit", sans-serif;
     font-weight: 200;
     font-style: normal;
+    
 }
 
 
@@ -65,11 +69,12 @@ nav{
 .Logo{
     top: 0;              
     left: 0;                  
-    width: 5rem;        
+    width: 10%;        
     height: 4rem;     
 }
 
 .nav_inicio{
+    
     display: flex;    
     align-items: center;
     height: 4rem;
@@ -82,20 +87,6 @@ nav{
 
 .icono{
     margin-right: 1rem;
-}
-
-.btn-custom{
-    background-color: red;
-    color: white;
-    border: none;
-    
-}
-
-.btn-promo{
-    background-color: red;
-    color: white;
-    border: none;
-    
 }
 
 /******************************************* HEADER *******************************************/
@@ -112,12 +103,22 @@ main{
     text-align: center;
 }
 
-
 .main_cards{
     display: flex;
     justify-content: space-around;
 }
 
+.contador-carro{
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+}
 /****************************************Footer*************************************************/
 .container{
     margin-top: auto;
@@ -152,4 +153,19 @@ main{
     color: #e2e6ea;
     align-content: center;
     text-align: center;
+}
+/**/
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+}
+.text {
+    max-width: 50%; /* Puedes ajustar el ancho */
+    text-align: right;
+    align-items: center;
+}
+#CuponForm{
+    margin-left: 2rem;
+    color: #0f011e;
 }
