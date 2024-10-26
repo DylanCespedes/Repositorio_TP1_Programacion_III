@@ -86,3 +86,38 @@ nav{
 #main{
     padding: 4%;
 }
+
+/****************************************Footer*************************************************/
+.container{
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: auto;
+    text-align: center;
+}
+.item {
+    color: white; 
+    padding: 10x; 
+    text-align: center; 
+    border-radius: 15px; 
+    margin: 0px;
+}
+.RSocial{
+    margin-left: 10px;  
+    border-radius: 100%;  
+    max-width: 15%;
+    height: auto;
+}
+#redes{
+    margin-left: 10px;  
+    
+}
+#QuienesSomos{
+    color: #e2e6ea;
+    align-content: center;
+    text-align: center;
+}

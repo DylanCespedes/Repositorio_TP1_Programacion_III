@@ -1,3 +1,3 @@
 function mostrarAlerta(){
-    alert("Agregado al carrito con exito!!!");
+    alert("Agregado con exito al carro!!!");
 }

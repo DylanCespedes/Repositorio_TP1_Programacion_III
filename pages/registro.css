@@ -41,6 +41,11 @@ body {
     font-style: normal;
 }
 
+.btn-custom{
+    background-color: red;
+    color: white;
+    border: none;
+}
 
 /* ******************** Barra de navegación ***************** */
 nav{
@@ -84,8 +89,70 @@ nav{
     margin-right: 1rem;
 }
 
-.btn-custom{
-    background-color: red;
-    color: white;
-    border: none;
+.inicio-sesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.btn-iniciar-sesion{
+    margin-top: 1rem;
+    
+}
+
+/******************************************* HEADER *******************************************/
+main{
+    padding-top: 15vh;
+    background-color: var(--background);
+    padding-bottom: 100vh;
+}
+
+.main_subtitulo{
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+.main_cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+/****************************************Footer*************************************************/
+.container{
+    margin-top: auto;
+    background-color: blue;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 20px;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+}
+.item {
+    color: white; 
+    padding: 10x; 
+    text-align: center; 
+    border-radius: 15px; 
+    margin: 0px;
+}
+.RSocial{
+    margin-left: 10px;  
+    border-radius: 100%;  
+    max-width: 15%;
+    height: auto;
+}
+#redes{
+    margin-left: 10px;  
+    
+}
+#QuienesSomos{
+    color: #e2e6ea;
+    align-content: center;
+    text-align: center;
+}
+
+
