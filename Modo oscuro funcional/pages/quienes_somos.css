@@ -1,0 +1,143 @@
+:root{
+    /* paleta de colores */
+    --violeta: #341d75; /* RGB */
+    --transparente: rgba(150, 12, 255, 0.473);
+
+    /* tamaño */
+    --tamanoParrafo: 2rem;
+    --tamanoTitulos: 4rem;
+    --tamanoSubtitulos: 2.8rem;
+
+    /*fondos */
+    --fondoTexto: #e8c7ff;
+    --fondoOscuro: #0f011e;
+    
+
+    /* tipografia */
+    --letraFamily: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+body.light-mode{
+    background-color: #e2e6ea;
+    --colorText: #000;
+}
+body.dark-mode{
+    background-color: rgb(87, 87, 87);
+    --colorText: #ffffff;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--letraFamily);
+}
+
+*{
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+
+/* ******************** Barra de navegación ***************** */
+nav{
+    position: sticky;
+    top:0;
+    background-color: var(--violeta); 
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 4rem;
+    z-index: 1;
+}
+
+.Titulo {
+    color: var(--colorText);
+    font-size: larger;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+}
+
+.Logo{
+    top: 0;              
+    left: 0;                  
+    width: 10%;        
+    height: 4rem;     
+}
+
+.nav_inicio{
+    display: flex;    
+    align-items: center;
+    height: 4rem;
+}
+
+.iconos{
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.icono{
+    margin-right: 1rem;
+}
+
+.btn-custom{
+    background-color: red;
+    color: var(--colorTex);
+    border: none;
+}
+
+/*********************************** MAIN ***********************************/
+
+#main{
+    padding: 4%;
+}
+
+.titulo_quienes_somos{
+    font-size: var(--tamanoTitulos);
+    margin-bottom: 3%;
+}
+
+.parrafo_quienes_somos{
+    font-size:var(--tamanoParrafo);
+    padding: 0% 5% 0% 5%;
+}
+
+/****************************************Footer*************************************************/
+.container{
+    margin-top: auto;
+    background-color: blue;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 32.7px;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+}
+.item {
+    color: var(--colorTex); 
+    padding: 10x; 
+    text-align: center; 
+    border-radius: 15px; 
+    margin: 0px;
+}
+.RSocial{
+    margin-left: 10px;  
+    border-radius: 100%;  
+    max-width: 15%;
+    height: auto;
+}
+#redes{
+    margin-left: 10px;  
+    
+}
+#QuienesSomos{
+    color: var(--colorTex);
+    align-content: center;
+    text-align: center;
+}
