@@ -24,6 +24,11 @@
                 </div>
             </a>
             <div class="nav_inicio iconos">
+                <nav class="d-flex justify-content-left">
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Ingrese el producto" aria-label="Buscar">
+                    </form>
+                  </nav>
                 <a href=""><box-icon class='icono' name='cart' color='white'></box-icon></a>
                 <a href=""><box-icon class='icono' name='user-circle' color='white'></box-icon></a>
             </div>
@@ -32,6 +37,13 @@
 
     <main>
       <div id="container_productos"></div>
+
+      <div id="container_carrito">
+          <h3 class="titulo_carrito">Carrito</h3>
+          <div id="descripcion_carrito"></div>
+          <p id="precio_total"></p>
+      </div>
+
     </main>
 
     <footer class="container">

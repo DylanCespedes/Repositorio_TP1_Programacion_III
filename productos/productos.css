@@ -97,6 +97,19 @@ nav{
     padding:5%;
 }
 
+#container_carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blancoMarfil);
+    margin:0% 30% 5% 30%
+}
+
+.elemento_carrito{
+    border: 2px solid var(--background);
+}
+
+/************************* CARD ***********************************/
 .card-text, .card-title{
     font-family: var(--letraFamily);
 }
@@ -117,7 +130,7 @@ nav{
     justify-content: flex-end;
 }
 
-/****************************************Footer*************************************************/
+/**************************************** Footer *************************************************/
 .container{
     margin-top: auto;
     background-color: blue;
