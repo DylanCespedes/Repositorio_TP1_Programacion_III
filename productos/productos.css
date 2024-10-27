@@ -97,6 +97,10 @@ nav{
     padding:5%;
 }
 
+.card-text, .card-title{
+    font-family: var(--letraFamily);
+}
+
 .btn-custom{
     background-color: var(--violeta);
     color: white;
@@ -105,6 +109,12 @@ nav{
 
 .card{
     margin-bottom: 20vh;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 /****************************************Footer*************************************************/
