@@ -5,7 +5,9 @@ let lista_limpia_productos = []; //lista donde guardo los productos por sus atri
 //variables del carrito
 let carrito = [] //carrito vacío
 let carrito_mensaje = [] //lista donde guardo lo que aparecerá en el HTML cuando se agregue un producto al carrito
-let acumulador_carrito = 0
+let acumulador_carrito = 0 //variable que guarda el total del carrito
+
+let lista_btn_borrar=[]
 
 //Obtengo los contenedores donde muestro los productos, donde ingresaré el carrito y los precios
 let container_productos = document.getElementById('container_productos');
@@ -54,21 +56,68 @@ fetch('../Json_productos.json')//leemos el archivo
     //Guardo una lista con los botones
     let lista_botones = document.getElementsByClassName("btn_carrito");
 
-    //Le agrego funcionabilidad a los botones. La función del click agrega que si se dispara, ingrese a la lista carrito el producto en el mismo indice del botón que hizo click
+    //Le agrego funcionabilidad a los botones. Recorro la lista de botones, le agrego eventos a cada uno de ellos cuando haga click, dispare la función. Que trata de agregar a la lista del carrito, el producto que está en el mismo indice que el botón. Luego sumo el precio de ese producto al total. Finalmente, agrego a la lista carrito_mensaje, las etiquetas que quiero que inserte en el HTML, describiendo su carrito.
     for(let i = 0; i < lista_botones.length; i++){
         lista_botones[i].addEventListener("click", () => {
-            carrito.push(lista_limpia_productos[i]);
-            acumulador_carrito += lista_limpia_productos[i].precio;
-            carrito_mensaje += `<div class="elemento_carrito">
+            carrito.push(lista_limpia_productos[i]); //ingreso el producto a la lista carrito
+            acumulador_carrito += lista_limpia_productos[i].precio; //acumulo el precio total
+            carrito_mensaje.push(`<div class="elemento_carrito">
                                 <p>Nombre del producto: ${lista_limpia_productos[i].nombre}</p>
                                 <p>Precio del producto: ${lista_limpia_productos[i].precio}</p>
+                                <box-icon name='x' color='red' class='boton_borrar'></box-icon>
                                 </div>
-                                `
-            descripcion_carrito.innerHTML = carrito_mensaje;
-            precio_total.textContent = `Precio total: ${acumulador_carrito}`;
-        
+                                `)//Agrego los datos que quiero que aparezca en el apartado de carrito del HTML
+            descripcion_carrito.innerHTML = carrito_mensaje; //Inserto en el HTML este mensaje
+            precio_total.textContent = `Precio total: ${acumulador_carrito}`; //Inserto el precio total al HTML
+            
+            //Manipulando el boton de borrar producto
+            lista_btn_borrar = document.getElementsByClassName('boton_borrar');//Agrego a una lista los botones de borrado
+            console.log(lista_btn_borrar);
+            console.log(carrito);
+            console.log(carrito_mensaje);
+            
+            for(let i = 0; i < lista_btn_borrar.length; i++){ //Recorro la lista de los botones
+                lista_btn_borrar[i].addEventListener("click", () => { //Cuando apriete sobre el botón, que cumpla la siguiente función
+                    carrito.splice(i,1); //Borrar del carrito, el elemento que está en igual indice que el botón que apretó
+                    carrito_mensaje.splice(i,1); //Lo mismo, pero de la lista que contiene el mensaje que aparece en el carrito
+                    console.log(carrito);
+                    console.log(carrito_mensaje);
+                    descripcion_carrito.innerHTML = carrito_mensaje; //Vuelvo a insertar en el HTML el mensaje
+                })
+            }
         });
     } 
-
+    
 });
 
+
+
+
+/**************************** BOTONES FILTRO ***********************/
+function cambiarTextoBotonMarca(nuevoTexto){
+    document.getElementById("dropDownButton-marca").textContent = nuevoTexto;
+}
+
+let listaItemMarca = document.getElementsByClassName("item-marca");
+
+let listaItemComponente = document.getElementsByClassName("item-componente");
+
+for(let i = 0; i<listaItemMarca.length; i++){
+    listaItemMarca[i].addEventListener("click", ()=>{
+
+        cambiarTextoBotonMarca(listaItemMarca[i].textContent);
+
+    });
+}
+
+function cambiarTextoBotonComponente(nuevoTexto){
+    document.getElementById("dropdownButton-componente").textContent = nuevoTexto;
+}
+
+for(let i = 0; i<listaItemComponente.length; i++){
+    listaItemComponente[i].addEventListener("click", ()=>{
+
+        cambiarTextoBotonComponente(listaItemComponente[i].textContent);
+
+    });
+}

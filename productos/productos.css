@@ -90,6 +90,19 @@ nav{
 
 /**************************************** Main *************************************************/
 
+/************************* BOTONES FILTRO ***********************************/
+.btn-group{
+    margin-bottom: 5vh;
+    margin-left: 1%;
+}
+.main_filtro{
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 3vh;
+    text-align: left;
+}
+
+/************************* PRODUCTOS Y CARRITO ***********************************/
 #container_productos{
     display: flex;
     justify-content: space-around;
@@ -128,6 +141,11 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.elemento_carrito{
+    margin-bottom: 3%;
+    padding: 2%;
 }
 
 /**************************************** Footer *************************************************/

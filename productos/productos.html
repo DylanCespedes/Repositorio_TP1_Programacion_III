@@ -36,13 +36,46 @@
     </header>
 
     <main>
-      <div id="container_productos"></div>
 
-      <div id="container_carrito">
-          <h3 class="titulo_carrito">Carrito</h3>
-          <div id="descripcion_carrito"></div>
-          <p id="precio_total"></p>
-      </div>
+        <!-- Filtros -->
+        <h3 class="main_filtro">Filtrar por</h3>
+
+        <div class="btn-group">
+          <button id="dropDownButton-marca" class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Marca
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item item-marca" href="#">Nvidia</a></li>
+            <li><a class="dropdown-item item-marca" href="#">Aorus</a></li>
+            <li><a class="dropdown-item item-marca" href="#">Ryzen</a></li>
+            <li><a class="dropdown-item item-marca" href="#">AMD</a></li>
+            <li><a class="dropdown-item item-marca" href="#">WD</a></li>
+            <li><a class="dropdown-item item-marca" href="#">Intel</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button id="dropdownButton-componente" class="btn btn-secondary btn-sm" type="button">
+            Componente
+          </button>
+          <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item item-componente" href="#">Procesador</a></li>
+            <li><a class="dropdown-item item-componente" href="#">Grafica</a></li>
+            <li><a class="dropdown-item item-componente" href="#">Ram</a></li>
+            <li><a class="dropdown-item item-componente" href="#">Rom</a></li>
+            <li><a class="dropdown-item item-componente" href="#">Disco</a></li>
+          </ul>
+        </div>
+
+        <!-- Productos y carrito -->
+        <div id="container_productos"></div>
+        <div id="container_carrito">
+            <h3 class="titulo_carrito">Carrito</h3>
+            <div id="descripcion_carrito"></div>
+            <p id="precio_total"></p>
+        </div>
 
     </main>
 

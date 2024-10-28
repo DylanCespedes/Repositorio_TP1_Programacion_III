@@ -74,7 +74,7 @@
     },
     {
       "Id": 8,
-      "Tipo": "Disco",
+      "Tipo": "Memorias Rom",
       "Marca": "Wd",
       "Nombre": "Hdd Wd 1TB",
       "Precio": 120,
@@ -84,7 +84,7 @@
     {
       "Id": 9,
       "Tipo": "Grafica",
-      "Marca": "nvidia",
+      "Marca": "Nvidia",
       "Nombre": "rtx 4090",
       "Precio": 1000,
       "Descripcion": "La grafica mas potente",
