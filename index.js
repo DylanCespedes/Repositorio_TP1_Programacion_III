@@ -1,9 +1,27 @@
-let contadorCarrito = 0;
+function cambiarTextoBotonMarca(nuevoTexto){
+    document.getElementById("dropDownButton-marca").textContent = nuevoTexto;
+}
 
-function agregarCarrito(){
-    contadorCarrito++;
+let listaItemMarca = document.getElementsByClassName("item-marca");
 
-    document.getElementById("contadorCarrito").textContent = contadorCarrito;
+let listaItemComponente = document.getElementsByClassName("item-componente");
 
-    alert("Se agrego al carro con exito!!!");
+for(let i = 0; i<listaItemMarca.length; i++){
+    listaItemMarca[i].addEventListener("click", ()=>{
+
+        cambiarTextoBotonMarca(listaItemMarca[i].textContent);
+
+    });
+}
+
+function cambiarTextoBotonComponente(nuevoTexto){
+    document.getElementById("dropdownButton-componente").textContent = nuevoTexto;
+}
+
+for(let i = 0; i<listaItemComponente.length; i++){
+    listaItemComponente[i].addEventListener("click", ()=>{
+
+        cambiarTextoBotonComponente(listaItemComponente[i].textContent);
+
+    });
 }

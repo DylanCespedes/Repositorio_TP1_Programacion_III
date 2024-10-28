@@ -99,6 +99,11 @@ nav{
     margin-bottom: 20%;
 }
 
+.btn-group{
+    margin-bottom: 5vh;
+    margin-left: 1%;
+}
+
 /******************************************* HEADER *******************************************/
 main{
     padding-top: 15vh;
@@ -113,6 +118,12 @@ main{
     text-align: center;
 }
 
+.main_filtro{
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 3vh;
+    text-align: left;
+}
 
 .main_cards{
     display: flex;
