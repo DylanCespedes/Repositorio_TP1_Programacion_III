@@ -1,0 +1,197 @@
+:root{
+    /* paleta de colores */
+    --violeta: #341d75; /* RGB */
+    --blancoMarfil: #e2e6ea;
+    --transparente: rgba(150, 12, 255, 0.473);
+
+    /* tamaño */
+    --tamanoParrafo: 2rem;
+    --tamanoTitulos: 4rem;
+    --tamanoSubtitulos: 2.8rem;
+
+    /*fondos */
+    --fondoTexto: #e8c7ff;
+    --fondoOscuro: #0f011e;
+    
+
+    /* tipografia */
+    --letraFamily: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+body.light-mode{
+    --background: white;
+    background-color: #e2e6ea;
+    --colorText: #000;
+    
+    --background-Form-color: #ffffff;
+}
+body.dark-mode{
+    --background: rgb(88, 88, 88);
+    background-color: rgb(87, 87, 87);
+    --colorText: #ffffff;
+    --background-Form-color: #000;
+}
+body {
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    font-family: var(--letraFamily);
+    background-color: var(--background);
+}
+
+*{
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+/* ******************** Barra de navegación ***************** */
+nav{
+    position: sticky;
+    top:0;
+    background-color: var(--violeta); 
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 4rem;
+    z-index: 1;
+}
+
+.Titulo {
+    color: white;
+    font-size: larger;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+}
+
+.Logo{
+    top: 0;              
+    left: 0;                  
+    width: 5rem;        
+    height: 4rem;     
+}
+
+.nav_inicio{
+    display: flex;    
+    align-items: center;
+    height: 4rem;
+}
+
+.iconos{
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.icono{
+    margin-right: 1rem;
+}
+
+.contador-carro{
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+#carroVacio{
+    color: var(--colorText);
+
+}
+.titulo_tus_compras{
+    color: var(--colorText);
+}
+
+.position-relative .badge{
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    font-size: 0.7rem;
+    padding: 0.2em 0.4em;
+}
+
+.btn-custom{
+    background-color: red;
+    color: white;
+    border: none;
+    
+}
+
+/*********************************** MAIN ***********************************/
+
+#main{
+    padding: 4%;
+}
+
+/****************************************Footer*************************************************/
+.container{
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr ; 
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 30px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 23% ;
+    text-align: center;
+}
+.item {
+    color: white; 
+    padding: 10x; 
+    text-align: center; 
+    border-radius: 15px; 
+    margin: 0px;
+}
+.RSocial{
+    margin-left: 10px;  
+    border-radius: 100%;  
+    max-width: 15%;
+    height: auto;
+}
+#redes{
+    margin-left: 10px;  
+    
+}
+#QuienesSomos{
+    color: #e2e6ea;
+    align-content: center;
+    text-align: center;
+}
+
+/****************************************media query*************************************************/
+
+@media screen and (max-width: 768px){
+    body{
+        font-size: 14px;
+    }
+
+    .Titulo{
+        display: none;
+    }
+
+    .nav_inicio{
+        justify-content: flex-end;
+        
+    }
+
+    nav{
+        grid-template-columns: 55% 45%;
+    }
+
+    main{
+        padding-top: 5vh;
+    }
+
+    .container{
+        margin-top: 20rem;
+    }
+
+}
