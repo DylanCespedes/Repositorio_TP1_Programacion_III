@@ -18,113 +18,150 @@
     <header>
         <!-- Barra de navegación -->
         <nav>
-            <a href="#main">
+            <a href="../index.html">
                 <div class="nav_inicio">
                     <img src="../image/Logo.jpg" class="Logo">
                     <h1 class="Titulo"> CompraPC </h1>
                 </div>
             </a>
             <div class="nav_inicio iconos">
-                <a href=""><box-icon class='icono' name='cart' color='white'></box-icon></a>
-                <a href=""><box-icon class='icono' name='user-circle' color='white'></box-icon></a>
+                <a href="/pages/carrito.html"><box-icon class='icono' name='cart' color='white'></box-icon></a>
+                <a href="/pages/registro.html"><box-icon class='icono' name='user-circle' color='white'></box-icon></a>
             </div>
         </nav>   
     </header>
-    <div>
-        <div class="title">Cupones</div>
+    <main id="main">
+        <div id="container_cupones">
+            <div class="title">Cupones</div>
+            
+            <form id="CuponForm">
+                <input type="text" id="cuponInput" placeholder="Ingresa el código de cupón" required>
+                <button type="submit" class="btn btn-primary">Verificar</button>
+            </form>
+
+            <button type="button" class="btn btn-primary" id="liveToastBtn" onclick="alert('Inserte su cupon y obtendra un descuento')">Como usar los cupones</button>
+
+            <div class="title">Copmpra coins</div>
+        </div>
         
-        <form id="CuponForm">
-            <input type="text" id="cuponInput" placeholder="Ingresa el código de cupón" required>
-            <button type="submit" class="btn btn-primary">Verificar</button>
-        </form>
+        <div class="title">Ofertas Especiales</div>
+        <div class="main_cards">
+                
+            <!-- carta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
+                <div class="card-body">
+                <h5 class="card-title">Nombre</h5>
+                <p class="card-text">Pequeña descripción y precio</p>
+                </div>
+            </div>
+
+            <!-- carta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
+                <div class="card-body">
+                <h5 class="card-title">Nombre</h5>
+                <p class="card-text">Pequeña descripción y precio</p>
+                </div>
+            </div>
+
+            <!-- carta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
+                <div class="card-body">
+                <h5 class="card-title">Nombre</h5>
+                <p class="card-text">Pequeña descripción y precio</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="title"> 2X1</div>
+        <div class="main_cards">
+                
+            <!-- carta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
+                <div class="card-body">
+                <h5 class="card-title">Nombre</h5>
+                <p class="card-text">Ofert 2x1</p>
+                </div>
+            </div>
+
+            <!-- carta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
+                <div class="card-body">
+                <h5 class="card-title">Nombre</h5>
+                <p class="card-text">Ofert 2x1</p>
+                </div>
+            </div>
+
+            <!-- carta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
+                <div class="card-body">
+                <h5 class="card-title">Nombre</h5>
+                <p class="card-text">Ofert 2x1</p>
+                </div>
+            </div>
+        </div>
+    </main>
+<!-------------------- FOOTER  ----------------->
+<footer class="container">
+      
+    <!-- Quienes somos -->
+    <!-- Botones -->
+    <div id="botones_quienes_somos">
+      <a href="pages/quienes_somos.html" class="item_footer" id="QuienesSomos">Quienes somos</a>
+
+      <button class="btn btn-secondary item_footer" onclick="CambiarClaroOscuro()">Cambiar Modo</button>
+      <a class="item_footer" href="pages/Desarrollo.html"> 
+        <button class="btn btn-secondary">Modo Desarrollador</button>
+      </a>
+
     </div>
-    <button type="button" class="btn btn-primary" id="liveToastBtn" onclick="alert('Inserte su cupon y obtendra un descuento')">Como usar los cupones</button>
-   
     
-    <div class="title">Copmpra coins</div>
-    <div class="title">Ofertas Especiales</div>
-    <div class="main_cards">
-            
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-            <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
-            <div class="card-body">
-              <h5 class="card-title">Nombre</h5>
-              <p class="card-text">Pequeña descripción y precio</p>
-            </div>
-        </div>
+    <!-- Formulario -->
+    <form action="Link" method="post" target="_blank" class="formulario">
+      <h3>Envianos tu consulta</h1>
 
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-            <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
-            <div class="card-body">
-              <h5 class="card-title">Nombre</h5>
-              <p class="card-text">Pequeña descripción y precio</p>
-            </div>
-        </div>
+      <label for="email"><h5>Correo electrónico:</h1></label>
+      <input type="email" id="email" name="email" required><br>
 
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-            <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
-            <div class="card-body">
-              <h5 class="card-title">Nombre</h5>
-              <p class="card-text">Pequeña descripción y precio</p>
-            </div>
-        </div>
+      <label for="mensaje"><h5>Tu Consulta:</h1></label>
+      <textarea id="mensaje" name="mensaje"  required></textarea>
+
+      <button>Enviar</button>
+    </form>
+
+    <!-- Redes -->
+    <div id="redes_footer">
+      <h1 id="redes">Redes:</h1>
+
+      <div class="RSocial">
+        <a href="https://www.facebook.com/?locale=es_LA"><img class="logo_redes" src="../image/Fcabook.png"></a>
+        <p>Facebook</p>
+      </div>
+
+      <div class="RSocial">
+        <a href="https://www.instagram.com/?hl=es"><img class="logo_redes" src="../image/Instagrampng.png"></a>
+        <p>Instagram</p>
+      </div>
+
+      <div class="RSocial">
+        <a href="https://www.tiktok.com/?lang=es"><img class="logo_redes" src="../image/Tik tok1.png"> </a>
+        <p>Tiktok</p>
+      </div>
+
+      <div class="RSocial">
+        <a href="https://x.com/home?lang=es"><img class="logo_redes" src="../image/Twiter.jpg"></a>
+        <p>Twitter</p>
+      </div>
+
     </div>
 
-    <div class="title"> 2X1</div>
-    <div class="main_cards">
-            
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-            <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
-            <div class="card-body">
-              <h5 class="card-title">Nombre</h5>
-              <p class="card-text">Ofert 2x1</p>
-            </div>
-        </div>
-
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-            <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
-            <div class="card-body">
-              <h5 class="card-title">Nombre</h5>
-              <p class="card-text">Ofert 2x1</p>
-            </div>
-        </div>
-
-        <!-- carta -->
-        <div class="card" style="width: 18rem;">
-            <img src="../image/Ejemplo_foto_carousel.jpg" class="card-img-top" alt="foto_card">
-            <div class="card-body">
-              <h5 class="card-title">Nombre</h5>
-              <p class="card-text">Ofert 2x1</p>
-            </div>
-        </div>
-    </div>
-</main>
-    <footer class="container">
-       
-      <form action="Link" method="post" target="_blank">
-        <a href="./quienes_somos.html" class="hover-underline">Quienes somos</a>
-        <h1>Envianos tu consulta</h1>
-
-        <label for="email"><h1>Correo electrónico:</h1></label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="mensaje"><h1>Tu Consulta:</h1></label>
-        <textarea id="mensaje" name="mensaje"  required></textarea>
-
-        <button >Enviar</button>
-      </form>
-      <div>    <button class="btn btn-secondary" onclick="CambiarClaroOscuro()">Cambiar Modo</button>
-        <button class="btn btn-secondary">Modo Desarollador</button>
-        <h1 id="redes">Redes:</h1>
-        <a href="https://www.facebook.com/?locale=es_LA"><img class="RSocial" src="../image/Fcabook.png"></a>
-        <a href="https://www.instagram.com/?hl=es"><img class="RSocial" src="../image/Instagrampng.png"></a>
-        <a href="https://www.tiktok.com/?lang=es"><img class="RSocial" src="../image/Tik tok1.png"> </a>
-        <a href="https://x.com/home?lang=es"><img class="RSocial" src="../image/Twiter.jpg"></div></a>
-        <script src="./Desarollo.js"></script>
+  </footer>
+        <script src="./promociones.js"></script>
+      </div>
 </body>
 </html>

@@ -30,7 +30,6 @@ body.light-mode{
     --background: white;
     background-color: #e2e6ea;
     --colorText: #000;
-    
     --background-Form-color: #ffffff;
 }
 body.dark-mode{
@@ -86,6 +85,18 @@ nav{
     height: 4rem;
 }
 
+/* Animación logo */
+.nav_inicio img:hover{
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
 .iconos{
     justify-content: flex-end;
     margin-right: 2rem;
@@ -95,37 +106,21 @@ nav{
     margin-right: 1rem;
 }
 
-.btn-custom{
-    background-color: red;
-    color: var(--colorText);
-    border: none;
-    
-}
-
-.btn-producto{
-    background-color: red;
-    color: var(--colorText);
+.btn{
+    background-color: var(--violeta);
+    color: white;
     border: none;
 }
 
 .btn-promo{
-    background-color: blue;
-    color: var(--colorText);
-    border: none;
     text-align: center;
     margin-bottom: 20%;
-}
-
-.btn-group{
-    margin-bottom: 5vh;
-    margin-left: 1%;
 }
 
 /******************************************* HEADER *******************************************/
 main{
     padding-top: 15vh;
     background-color: var(--background);
-    padding-bottom: 10vh;
 }
 
 .main_subtitulo{
@@ -142,9 +137,27 @@ main{
     text-align: left;
 }
 
+.card{
+    margin-bottom: 20vh;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    width: 18rem;
+}
+
 .main_cards{
     display: flex;
     justify-content: space-around;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #contenedor-producto{
@@ -160,64 +173,98 @@ main{
 /****************************************Footer*************************************************/
 .container{
     margin-top: auto;
-    background-color: blue;
+    background-color: var(--violeta);
     margin-left: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 10px; /* Espacio entre los elementos */
+    grid-template-columns: 25% 50% 25%;
     padding: 20px;
     margin: 0px;
     width: 100%;
     max-width: 100%;
+    color: white;
+    align-items: center;
 }
-.item {
-    color: white; 
-    padding: 10x; 
-    text-align: center; 
-    border-radius: 15px; 
-    margin: 0px;
+
+#botones_quienes_somos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
-.RSocial{
-    margin-left: 10px;  
-    border-radius: 100%;  
-    max-width: 15%;
-    height: auto;
+
+.item_footer{
+    margin-bottom: 5vh;
 }
-#redes{
-    margin-left: 10px;  
-    
-}
+
 #QuienesSomos{
     color: #e2e6ea;
     align-content: center;
     text-align: center;
 }
 
+/**************** Formulario *****************/
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/**************** Redes *****************/
+.RSocial{
+    margin-bottom: 2vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.logo_redes{  
+    border-radius: 100%;  
+    max-width: 90%;
+    height: auto;
+}
+.RSocial p{
+    margin: 0;
+    align-content: center;
+}
+
+.container img:hover{
+    animation: bounce 0.5s;
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+
 /****************************************media query*************************************************/
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     body{
         font-size: 14px;
     }
 
+    /*********** HEADER ************/
     .Titulo{
         display: none;
     }
 
-    .nav_inicio{
-        justify-content: flex-end;
-        
+    .iconos{
+        display:none;
+
     }
 
     nav{
-        grid-template-columns: 55% 45%;
+        display: flex;
+        justify-content: center;
     }
 
     .carousel{
         display: none;
     }
 
-    main{
+    /*********** MAIN ************/
+    #main{
         padding-top: 5vh;
     }
 
@@ -226,8 +273,43 @@ main{
         margin-right: 25%;
     }
 
-    .btn-verProductos{
-        margin-left: 30%;
-        margin-right: 30%;
+    .card{
+        margin-bottom: 5vh;
+        width: 10rem;
+        height: auto;
+    }
+
+    .card-text{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .main_cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin-bottom: 5vh;
+        width: 18rem;
+        height: auto;
+    }
+    .card-text{
+        display: block;
+    }
+
+    .btn-promo{
+        width: 60%;
+    }
+    
+    #contenedor-producto{
+        margin-left: 10%;
+        margin-right: 10%;
+        align-items: center;
+    }
+
+    .container{
+        padding: 0;
     }
 }

@@ -17,7 +17,7 @@
     <header>
         <!-- Barra de navegación -->
         <nav>
-            <a href="../menu.html">
+            <a href="../index.html">
                 <div class="nav_inicio">
                     <img src="../image/Logo.jpg" class="Logo">
                     <h1 class="Titulo"> CompraPC </h1>
@@ -29,8 +29,8 @@
                       <input class="form-control me-2" type="search" placeholder="Ingrese el producto" aria-label="Buscar">
                     </form>
                   </nav>
-                <a href=""><box-icon class='icono' name='cart' color='white'></box-icon></a>
-                <a href=""><box-icon class='icono' name='user-circle' color='white'></box-icon></a>
+                <a href="/pages/carrito.html"><box-icon class='icono' name='cart' color='white'></box-icon></a>
+                <a href="/pages/registro.html"><box-icon class='icono' name='user-circle' color='white'></box-icon></a>
             </div>
         </nav>
     </header>
@@ -39,7 +39,6 @@
 
         <!-- Filtros -->
         <h3 class="main_filtro">Filtrar por</h3>
-
         <div class="btn-group">
           <button id="dropDownButton-marca" class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Marca
@@ -48,26 +47,24 @@
             <li><a class="dropdown-item item-marca" href="#">Nvidia</a></li>
             <li><a class="dropdown-item item-marca" href="#">Aorus</a></li>
             <li><a class="dropdown-item item-marca" href="#">Ryzen</a></li>
-            <li><a class="dropdown-item item-marca" href="#">AMD</a></li>
-            <li><a class="dropdown-item item-marca" href="#">WD</a></li>
+            <li><a class="dropdown-item item-marca" href="#">Amd</a></li>
+            <li><a class="dropdown-item item-marca" href="#">Wd</a></li>
             <li><a class="dropdown-item item-marca" href="#">Intel</a></li>
+            <li><a class="dropdown-item item-marca" href="#">Kingston</a></li>
           </ul>
         </div>
         <div class="btn-group">
-          <button id="dropdownButton-componente" class="btn btn-secondary btn-sm" type="button">
+          <button id="dropDownButton-tipo" class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Componente
-          </button>
-          <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item item-componente" href="#">Procesador</a></li>
             <li><a class="dropdown-item item-componente" href="#">Grafica</a></li>
             <li><a class="dropdown-item item-componente" href="#">Ram</a></li>
-            <li><a class="dropdown-item item-componente" href="#">Rom</a></li>
-            <li><a class="dropdown-item item-componente" href="#">Disco</a></li>
+            <li><a class="dropdown-item item-componente" href="#">Memorias Rom</a></li>
           </ul>
         </div>
+        <div id="btn_restablecer" class="btn-group"></div>
 
         <!-- Productos y carrito -->
         <div id="container_productos"></div>
@@ -75,36 +72,66 @@
             <h3 class="titulo_carrito">Carrito</h3>
             <div id="descripcion_carrito"></div>
             <p id="precio_total"></p>
+            <button id="limpiar_carrito">Limpiar carrito</button>
         </div>
 
     </main>
 
-    <footer class="container">
-         
-        <form action="Link" method="post" target="_blank">
-          <a href="google.com" id="QuienesSomos" class="hover-underline">Quienes somos</a>
-          <h1>Envianos tu consulta</h1>
+<!-------------------- FOOTER  ----------------->
+<footer class="container">
+      
+  <!-- Quienes somos -->
+  <!-- Botones -->
+  <div id="botones_quienes_somos">
+    <a href="pages/quienes_somos.html" class="item_footer" id="QuienesSomos">Quienes somos</a>
+
+    <button class="btn btn-secondary item_footer" onclick="CambiarClaroOscuro()">Cambiar Modo</button>
+    <a class="item_footer" href="pages/Desarrollo.html"> 
+      <button class="btn btn-secondary">Modo Desarrollador</button>
+    </a>
+
+  </div>
   
-          <label for="email"><h1>Correo electrónico:</h1></label>
-          <input type="email" id="email" name="email" required><br>
-  
-          <label for="mensaje"><h1>Tu Consulta:</h1></label>
-          <textarea id="mensaje" name="mensaje"  required></textarea>
-  
-          <button class="btn btn-success">Enviar</button>
-        </form>
-        <div>
-          <button class="btn btn-secondary" onclick="CambiarClaroOscuro()">Cambiar Modo</button>
-          <a href="pages/Desarrollo.html"> 
-            <button class="btn btn-secondary">Modo Desarollador</button>
-          </a>
-          <h1 id="redes">Redes:</h1>
-          <a href="https://www.facebook.com/?locale=es_LA"><img class="RSocial" src="../image/Fcabook.png"></a>
-          <a href="https://www.instagram.com/?hl=es"><img class="RSocial" src="../image/Instagrampng.png"></a>
-          <a href="https://www.tiktok.com/?lang=es"><img class="RSocial" src="../image/Tik tok1.png"> </a>
-          <a href="https://x.com/home?lang=es"><img class="RSocial" src="../image/Twiter.jpg"></a>
-        </div>
-    </footer>
+  <!-- Formulario -->
+  <form action="Link" method="post" target="_blank" class="formulario">
+    <h3>Envianos tu consulta</h1>
+
+    <label for="email"><h5>Correo electrónico:</h1></label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="mensaje"><h5>Tu Consulta:</h1></label>
+    <textarea id="mensaje" name="mensaje"  required></textarea>
+
+    <button>Enviar</button>
+  </form>
+
+  <!-- Redes -->
+  <div id="redes_footer">
+    <h1 id="redes">Redes:</h1>
+
+    <div class="RSocial">
+      <a href="https://www.facebook.com/?locale=es_LA"><img class="logo_redes" src="../image/Fcabook.png"></a>
+      <p>Facebook</p>
+    </div>
+
+    <div class="RSocial">
+      <a href="https://www.instagram.com/?hl=es"><img class="logo_redes" src="../image/Instagrampng.png"></a>
+      <p>Instagram</p>
+    </div>
+
+    <div class="RSocial">
+      <a href="https://www.tiktok.com/?lang=es"><img class="logo_redes" src="../image/Tik tok1.png"> </a>
+      <p>Tiktok</p>
+    </div>
+
+    <div class="RSocial">
+      <a href="https://x.com/home?lang=es"><img class="logo_redes" src="../image/Twiter.jpg"></a>
+      <p>Twitter</p>
+    </div>
+
+  </div>
+
+</footer>
 
     <!-- Link de bootstrap y css -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

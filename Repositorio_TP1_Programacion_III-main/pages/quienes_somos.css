@@ -129,39 +129,70 @@ nav{
 /****************************************Footer*************************************************/
 .container{
     margin-top: auto;
-    background-color: blue;
+    background-color: var(--violeta);
     margin-left: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 10px; /* Espacio entre los elementos */
-    padding: 32.7px;
+    grid-template-columns: 25% 50% 25%;
+    padding: 20px;
     margin: 0px;
     width: 100%;
     max-width: 100%;
-    
+    color: white;
+    align-items: center;
 }
-.item {
-    color: white; 
-    padding: 10x; 
-    text-align: center; 
-    border-radius: 15px; 
-    margin: 0px;
+
+#botones_quienes_somos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
-.RSocial{
-    margin-left: 10px;  
-    border-radius: 100%;  
-    max-width: 15%;
-    height: auto;
+
+.item_footer{
+    margin-bottom: 5vh;
 }
-#redes{
-    margin-left: 10px;  
-    
-}
+
 #QuienesSomos{
     color: #e2e6ea;
     align-content: center;
     text-align: center;
 }
+
+/**************** Formulario *****************/
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/**************** Redes *****************/
+.RSocial{
+    margin-bottom: 2vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.logo_redes{  
+    border-radius: 100%;  
+    max-width: 90%;
+    height: auto;
+}
+.RSocial p{
+    margin: 0;
+    align-content: center;
+}
+
+.container img:hover{
+    animation: bounce 0.5s;
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+
 .hover-underline {
     color: #e2e6ea;
     align-content: center;
@@ -179,26 +210,34 @@ nav{
 
 /****************************************media query*************************************************/
 
-@media screen and (max-width: 768px){
-    body{
-        font-size: 14px;
-    }
+@media screen and (max-width: 800px){
 
+    /*********** HEADER ************/
     .Titulo{
         display: none;
     }
 
-    .nav_inicio{
-        justify-content: flex-end;
-        
+    .iconos{
+        display:none;
+
     }
 
     nav{
-        grid-template-columns: 55% 45%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel{
+        display: none;
     }
 
     main{
         padding-top: 5vh;
     }
+}
 
+@media screen and (max-width: 500px){
+    .container{
+        padding: 0;
+    }
 }
